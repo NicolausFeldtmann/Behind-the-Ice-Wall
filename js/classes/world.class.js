@@ -5,6 +5,14 @@ class World {
         new Walker(),
         new Walker(),
 ];
+clouds = [
+    new Cloud(),
+    new Cloud(),
+]
+backgroundObjects = [
+    new BackgrounObject('img/backgrounds/1/2.png', 0, 330),
+]
+
 canvas;
 ctx;
     constructor(canvas) {
@@ -15,14 +23,25 @@ ctx;
 
     draw() {
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
-        this.ctx.drawImage(this.char.img, this.char.x, this.char.y, this.char.width, this.char.height);
-        this.walkers.forEach(enemy => {
-            this.ctx.drawImage(enemy.img, enemy.x, enemy.y, enemy.width, enemy.height);
-        });
+        
+        this.addToMap(this.char);
+        this.addOjcToMap(this.clouds);
+        this.addOjcToMap(this.walkers);
+        this.addOjcToMap(this.backgroundObjects);
 
         let self = this;
         requestAnimationFrame(function() {
             self.draw();
         });
+    }
+
+    addOjcToMap(objects) {
+        objects.forEach(o => {
+            this.addToMap(o);
+        });
+    }
+
+    addToMap(mo) {
+        this.ctx.drawImage(mo.img, mo.x, mo.y, mo.width, mo.height);
     }
 }
