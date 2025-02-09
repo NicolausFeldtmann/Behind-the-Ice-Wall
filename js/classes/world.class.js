@@ -11,10 +11,14 @@ clouds = [
 ];
 backgroundObjects = [
     new BackgrounObject('img/backgrounds/1/2.png', 0),
-    new BackgrounObject('img/backgrounds/2/2.png', 0,)
+    new BackgrounObject('img/backgrounds/2/2.png', 0,),
+];
+forntObjects =  [
+    new FrontaObjects('img/backgrounds/3/9.png', 390),
+    new FrontaObjects('img/backgrounds/3/9.png', 0),
 ];
 sky = [
-    new Sky('img/objects/sky/2.png',0,0)
+    new Sky('img/objects/sky/1.png',0,0)
 ];
 
 canvas;
@@ -33,6 +37,7 @@ ctx;
         this.addToMap(this.char);
         this.addOjcToMap(this.clouds);
         this.addOjcToMap(this.walkers);
+        this.addOjcToMap(this.forntObjects);
 
         let self = this;
         requestAnimationFrame(function() {
