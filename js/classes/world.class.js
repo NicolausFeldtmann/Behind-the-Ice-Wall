@@ -8,10 +8,14 @@ class World {
 clouds = [
     new Cloud(),
     new Cloud(),
-]
+];
 backgroundObjects = [
-    new BackgrounObject('img/backgrounds/1/2.png', 0, 330),
-]
+    new BackgrounObject('img/backgrounds/1/2.png', 0),
+    new BackgrounObject('img/backgrounds/2/2.png', 0,)
+];
+sky = [
+    new Sky('img/objects/sky/2.png',0,0)
+];
 
 canvas;
 ctx;
@@ -24,10 +28,11 @@ ctx;
     draw() {
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
         
+        this.addOjcToMap(this.sky);
+        this.addOjcToMap(this.backgroundObjects);
         this.addToMap(this.char);
         this.addOjcToMap(this.clouds);
         this.addOjcToMap(this.walkers);
-        this.addOjcToMap(this.backgroundObjects);
 
         let self = this;
         requestAnimationFrame(function() {
