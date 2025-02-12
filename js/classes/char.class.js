@@ -14,7 +14,8 @@ class Char extends MoveableObject {
         'img/witheWalker/Skeleton_Warrior_1/PNG/PNG Sequences/Running/0_Skeleton_Warrior_Running_010.png',
         'img/witheWalker/Skeleton_Warrior_1/PNG/PNG Sequences/Running/0_Skeleton_Warrior_Running_011.png',
     ];
-    currentImage = 0;
+   world;
+
 
     constructor() {
         super().loadImage('img/witheWalker/Skeleton_Warrior_1/PNG/PNG Sequences/Running/0_Skeleton_Warrior_Running_000.png');
@@ -25,14 +26,24 @@ class Char extends MoveableObject {
 
     animate() {
         setInterval(() => {
-            let i = this.currentImage % this.IMAGES_WALKING.length;
-            let path = this.IMAGES_WALKING[i];
-            this.img = this.imageCache[path];
-            this.currentImage++;
-        }, 1000 / 13);
+
+            if(this.world.keyboard.RIGHT) {
+
+                let i = this.currentImage % this.IMAGES_WALKING.length;
+                let path = this.IMAGES_WALKING[i];
+                this.img = this.imageCache[path];
+                this.currentImage++;
+            }
+        }, 100);
     }
 
     jump() {
 
+    }
+
+    moveLeft() {
+        setInterval(() => {
+            this.x += this.speed;
+        }, 1000 / 100);
     }
 }

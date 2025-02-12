@@ -3,8 +3,10 @@ class World {
     walkers = [
         new Walker(),
         new Walker(),
-        new Walker(),
 ];
+    walkers2 = [
+        new Walker2(),
+    ];
 clouds = [
     new Cloud(),
     new Cloud(),
@@ -23,10 +25,18 @@ sky = [
 
 canvas;
 ctx;
-    constructor(canvas) {
+keyboard;
+
+    constructor(canvas, keyboard) {
         this.ctx = canvas.getContext('2d');
         this.canvas = canvas;
+        this.keyboard = keyboard;
         this.draw();
+        this.setWorld(); 
+    }
+
+    setWorld() {
+        this.char.world = this;
     }
 
     draw() {
@@ -37,6 +47,7 @@ ctx;
         this.addToMap(this.char);
         this.addOjcToMap(this.clouds);
         this.addOjcToMap(this.walkers);
+        this.addOjcToMap(this.walkers2);
         this.addOjcToMap(this.forntObjects);
 
         let self = this;
