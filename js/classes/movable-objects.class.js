@@ -7,6 +7,7 @@ class MoveableObject {
     imageCache = {};
     currentImage = 0;
     speed = 0.15;
+    otherDirection = false;
 
     loadImage(path) {
         this.img = new Image();
@@ -19,6 +20,13 @@ class MoveableObject {
             img.src = path;
             this.imageCache[path] = img;
         });
+    }
+
+    playAnimation(images) {
+        let i = this.currentImage % this.IMAGES_WALKING.length;
+        let path = this.IMAGES_WALKING[i];
+        this.img = this.imageCache[path];
+        this.currentImage++;
     }
 
     moveRight() {

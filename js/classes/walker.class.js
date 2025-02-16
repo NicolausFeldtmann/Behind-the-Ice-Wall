@@ -34,6 +34,7 @@ class Walker extends MoveableObject {
 
     moveLeft() {
         setInterval(() => {
+            this.otherDirection = true;
             this.x -= this.speed;
         }, 1000 / 200);
     }

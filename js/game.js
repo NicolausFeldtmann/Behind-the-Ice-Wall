@@ -8,11 +8,11 @@ function init() {
 }
 
 window.addEventListener('keydown', (e) => {
-    if (e.keyCode == 68) {
-        keyboard.LEAFT = true;
+    if (e.keyCode == 65) {
+        keyboard.LEFT = true;
     }
 
-    if (e.keyCode == 65) {
+    if (e.keyCode == 68) {
         keyboard.RIGHT = true;
     }
 
@@ -32,11 +32,11 @@ window.addEventListener('keydown', (e) => {
 })
 
 window.addEventListener('keyup', (e) => {
-    if (e.keyCode == 68) {
-        keyboard.LEAFT = false;
+    if (e.keyCode == 65) {
+        keyboard.LEFT = false;
     }
 
-    if (e.keyCode == 65) {
+    if (e.keyCode == 68) {
         keyboard.RIGHT = false;
     }
 
@@ -51,6 +51,4 @@ window.addEventListener('keyup', (e) => {
     if (e.keyCode == 32) {
         keyboard.SPACE = false;
     }
-    console.log(e);
-    
 })
