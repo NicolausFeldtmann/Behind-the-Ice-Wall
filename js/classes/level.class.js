@@ -12,7 +12,7 @@ class Level {
         this.walkers2 = walkers2;
         this.clouds = clouds;
         this.backgroundObjects = backgroundObjects;
-        this.forntObjects = forntObjects;
+        this. forntObjects = forntObjects;
         this.sky = sky;
     }
-}
+}d
