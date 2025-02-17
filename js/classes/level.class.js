@@ -15,4 +15,4 @@ class Level {
         this. forntObjects = forntObjects;
         this.sky = sky;
     }
-}d
+}
