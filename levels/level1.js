@@ -1,10 +1,12 @@
 const level1 = new Level(
+
     [
         new Walker(),
         new Walker(),
     ],
     [
         new Walker2(),
+        new Boss(),
     ],
     [
         new Cloud(),
@@ -57,6 +59,9 @@ const level1 = new Level(
         new Sky('img/objects/sky/1.png',3600,0),
         new Sky('img/objects/sky/1.png',4320,0),
         new Sky('img/objects/sky/1.png',5040,0),
+    ],
+    [
+        
     ],
 
 );
