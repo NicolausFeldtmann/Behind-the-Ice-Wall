@@ -5,17 +5,24 @@ class Boss extends MoveableObject {
     y = 35;
 
     IMAGE_WALKING = [
-        'img/enemys/Zombie_Villager_3/PNG/PNG Sequences/Running/0_Zombie_Villager_Running_000.png',
-        'img/enemys/Zombie_Villager_3/PNG/PNG Sequences/Running/0_Zombie_Villager_Running_001.png',
-        'img/enemys/Zombie_Villager_3/PNG/PNG Sequences/Running/0_Zombie_Villager_Running_002.png',
-        'img/enemys/Zombie_Villager_3/PNG/PNG Sequences/Running/0_Zombie_Villager_Running_003.png',
-        'img/enemys/Zombie_Villager_3/PNG/PNG Sequences/Running/0_Zombie_Villager_Running_004.png',
-        'img/enemys/Zombie_Villager_3/PNG/PNG Sequences/Running/0_Zombie_Villager_Running_005.png',
-        'img/enemys/Zombie_Villager_3/PNG/PNG Sequences/Running/0_Zombie_Villager_Running_006.png',
-        'img/enemys/Zombie_Villager_3/PNG/PNG Sequences/Running/0_Zombie_Villager_Running_007.png',
-        'img/enemys/Zombie_Villager_3/PNG/PNG Sequences/Running/0_Zombie_Villager_Running_008.png',
-        'img/enemys/Zombie_Villager_3/PNG/PNG Sequences/Running/0_Zombie_Villager_Running_010.png',
-        'img/enemys/Zombie_Villager_3/PNG/PNG Sequences/Running/0_Zombie_Villager_Running_011.png',
+        'img/enemys/Zombie_Villager_3/PNG/PNG Sequences/Idle/0_Zombie_Villager_Idle_000.png',
+        'img/enemys/Zombie_Villager_3/PNG/PNG Sequences/Idle/0_Zombie_Villager_Idle_001.png',
+        'img/enemys/Zombie_Villager_3/PNG/PNG Sequences/Idle/0_Zombie_Villager_Idle_002.png',
+        'img/enemys/Zombie_Villager_3/PNG/PNG Sequences/Idle/0_Zombie_Villager_Idle_003.png',
+        'img/enemys/Zombie_Villager_3/PNG/PNG Sequences/Idle/0_Zombie_Villager_Idle_004.png',
+        'img/enemys/Zombie_Villager_3/PNG/PNG Sequences/Idle/0_Zombie_Villager_Idle_005.png',
+        'img/enemys/Zombie_Villager_3/PNG/PNG Sequences/Idle/0_Zombie_Villager_Idle_006.png',
+        'img/enemys/Zombie_Villager_3/PNG/PNG Sequences/Idle/0_Zombie_Villager_Idle_007.png',
+        'img/enemys/Zombie_Villager_3/PNG/PNG Sequences/Idle/0_Zombie_Villager_Idle_008.png',
+        'img/enemys/Zombie_Villager_3/PNG/PNG Sequences/Idle/0_Zombie_Villager_Idle_009.png',
+        'img/enemys/Zombie_Villager_3/PNG/PNG Sequences/Idle/0_Zombie_Villager_Idle_010.png',
+        'img/enemys/Zombie_Villager_3/PNG/PNG Sequences/Idle/0_Zombie_Villager_Idle_011.png',
+        'img/enemys/Zombie_Villager_3/PNG/PNG Sequences/Idle/0_Zombie_Villager_Idle_012.png',
+        'img/enemys/Zombie_Villager_3/PNG/PNG Sequences/Idle/0_Zombie_Villager_Idle_013.png',
+        'img/enemys/Zombie_Villager_3/PNG/PNG Sequences/Idle/0_Zombie_Villager_Idle_014.png',
+        'img/enemys/Zombie_Villager_3/PNG/PNG Sequences/Idle/0_Zombie_Villager_Idle_015.png',
+        'img/enemys/Zombie_Villager_3/PNG/PNG Sequences/Idle/0_Zombie_Villager_Idle_016.png',
+        'img/enemys/Zombie_Villager_3/PNG/PNG Sequences/Idle/0_Zombie_Villager_Idle_017.png',
     ];
 
     IMAGE_IDLE = [
@@ -48,6 +55,7 @@ class Boss extends MoveableObject {
             this.img = this.imageCache[path];
             this.currentImage++;
         }, 1000 / 7)
+        this.otherDirection = true;
         //this.moveLeft();
     }
 
