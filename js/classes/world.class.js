@@ -53,6 +53,12 @@ camera_x = 0;
             mo.x = mo.x * -1;
         }
         this.ctx.drawImage(mo.img, mo.x, mo.y, mo.width, mo.height);
+        this.ctx.beginPath();
+        this.ctx.lineWidth = "5";
+        this.ctx.strokeStyle = "red";
+        this.ctx.rect(mo.x, mo.y, mo.x + mo.width, mo.y + mo.heigth);
+        this.ctx.stroke();
+
         if (mo.otherDirection) {
             mo.x = mo.x * -1;
             this.ctx.restore();

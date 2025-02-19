@@ -44,13 +44,30 @@ class MoveableObject {
         this.currentImage++;
     }
 
+    animationFall(images) { 
+        let i = this.currentImage % this.IMAGES_JUMPING.length;
+        let path = images[i];
+        this.img = this.imageCache[path];
+        this.currentImage++;
+    }
+
+    animatioSlash(images) {
+        let i = this.currentImage % this.IMAGES_SLASHING.length;
+        let path = images[i];
+        this.img = this.imageCache[path];
+        this.currentImage++;
+    }
+
     moveRight() {
+        this.x += this.speed;
         console.log('Moving right');
     }
 
     moveLeft() {
-        setInterval(() => {
-            this.x -= this.speed;
-        }, 1000 / 60);
+        this.x -= this.speed;
+    }
+
+    jump() {
+        this.speedY = 18;
     }
 }

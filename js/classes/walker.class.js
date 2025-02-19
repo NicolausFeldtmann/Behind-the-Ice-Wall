@@ -24,18 +24,16 @@ class Walker extends MoveableObject {
 
     animate() {
         setInterval(() => {
+            this.otherDirection = true;
+            this.moveLeft();
+        }, 1000 / 60);
+
+        setInterval(() => {
             let i = this.currentImage % this.IMAGE_WALKING.length;
             let path = this.IMAGE_WALKING[i];
             this.img = this.imageCache[path];
             this.currentImage++;
         }, 1000 / 7)
         this.moveLeft();
-    }
-
-    moveLeft() {
-        setInterval(() => {
-            this.otherDirection = true;
-            this.x -= this.speed;
-        }, 1000 / 200);
     }
 }
